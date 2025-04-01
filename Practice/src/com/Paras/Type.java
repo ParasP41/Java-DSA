@@ -1,4 +1,4 @@
-package com.Paras;
+package Paras;
 
 import java.util.Scanner;
 
