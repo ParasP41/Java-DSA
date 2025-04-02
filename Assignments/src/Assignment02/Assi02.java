@@ -80,6 +80,7 @@ public class Assi02 {
 
         //7
 
+
         //8
 //        System.out.print("enter the string : ");
 //        String str = sc.nextLine();
@@ -95,8 +96,10 @@ public class Assi02 {
 //        }
 
         //9
-
-
+        int num = 153;
+        while (num > 0) {
+            num = num / 10;
+        }
 
     }
 }
