@@ -97,9 +97,15 @@ public class Assi02 {
 
         //9
         int num = 153;
+        int mul=1;
+        int sum=0;
         while (num > 0) {
+            int ele=num%10;
+            mul*=ele;
+            sum+=mul;
             num = num / 10;
         }
+        System.out.println(sum);
 
     }
 }
