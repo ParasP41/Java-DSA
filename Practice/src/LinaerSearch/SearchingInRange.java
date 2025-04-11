@@ -1,7 +1,8 @@
-package Searching;
+package LinaerSearch;
 
-public class LinearSearch {
+public class SearchingInRange {
     public static void main(String[] args) {
 
     }
+
 }
