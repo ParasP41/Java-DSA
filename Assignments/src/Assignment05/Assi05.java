@@ -76,5 +76,24 @@ public class Assi05 {
 //        System.out.println(Arrays.toString(result));
 
 
+        //8
+//        int[] nums={6,5,4,8};
+//        int[] fin=new int[nums.length];
+//        for(int i=0;i<nums.length;i++)
+//        {
+//            int count=0;
+//            for(int j=0;j<nums.length;j++)
+//            {
+//                if(nums[i]>nums[j])
+//                {
+//                    count++;
+//                }
+//            }
+//            fin[i]=count;
+//        }
+//        System.out.println(Arrays.toString(fin));
+
+        //9
+
     }
 }
