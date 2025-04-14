@@ -4,6 +4,7 @@ public class FindMin {
     public static void main(String[] args) {
         int[] arr={18,12,7,4,12,34,2};
         System.out.println(min(arr));
+
     }
     static int min(int[] arr)
     {
