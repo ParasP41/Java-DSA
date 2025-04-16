@@ -1,0 +1,14 @@
+public class Concate
+{
+public static void main(String[] args)
+{
+int[] arr={1,2,3};
+int[] concate=new int[arr.length*2];
+for(int i=0;i<arr.length;i++)
+{
+concate[i]=arr[i];
+concate[n+i]=arr[i];
+}
+System.out.println(Arrays.toString(concate));`
+}
+}

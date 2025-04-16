@@ -1,6 +1,6 @@
 package BinarySearch;
 //In Binary search the array must be sorted
-public class BinarySearch {
+public class BinarySearchAssendingArray {
     public static void main(String[] args) {
         int[] arr={1,3,5,7,8,10,11};
         System.out.println(binary(arr,11));
