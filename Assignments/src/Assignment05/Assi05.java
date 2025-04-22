@@ -1,27 +1,28 @@
 package Assignment05;
 
-
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Assi05 {
     public static void main(String[] args) {
-        int[] arr={1,2,3,1,2,3};
-        int y=0;
-        int z=0;
-        int[] newArr=new int[arr.length];
+
+        int count=0;
+        int[] arr={12,345,2,6,7896};
         for (int i = 0; i < arr.length; i++) {
-            if(i%2==0)
+            int even=0;
+            int x=arr[i];
+            while (x>0)
             {
-                newArr[i]=arr[z];
-                z++;
-            }else
-            {
-                int x= (arr.length)/2;
-                newArr[i] = arr[x + y];
-                y++;
+                x=x/10;
+                even++;
             }
+            if(even%2==0)
+            {
+                count++;
+            }
+
         }
-        System.out.println(Arrays.toString(newArr));
+        System.out.println(count);
     }
 
 }
