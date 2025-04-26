@@ -32,10 +32,12 @@ public class Arrays02 {
 //        }
 
         //array of objects
-        String[] str=new String[5];//5 reference variable pointing at the different objects at the different places in the heap memory
-        for (int i = 0; i < str.length; i++) {
-            str[i]=in.next();
-        }
-        System.out.println(Arrays.toString(str));
+//        String[] str=new String[5];//5 reference variable pointing at the different objects at the different places in the heap memory
+//        for (int i = 0; i < str.length; i++) {
+//            str[i]=in.next();
+//        }
+//        System.out.println(Arrays.toString(str));
+
+
     }
 }
