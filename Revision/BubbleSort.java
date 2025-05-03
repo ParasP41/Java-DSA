@@ -3,26 +3,26 @@ import java.util.Arrays;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] arr={3,4,2,5,1};
-        binSort(arr);
+        int[] arr={2,4,3,1,5,6};
+        sort(arr);
         System.out.println(Arrays.toString(arr));
     }
-    static void binSort(int[] arr)
-    {
-        boolean swap;
+
+    static void sort(int[] arr) {
+        boolean step=false;
         for (int i = 0; i < arr.length; i++) {
-            swap=false;
-            for (int j = 0; j < arr.length-i; j++) {
-                if(j>=1 && arr[j]>arr[j-1])
+            step=false;
+            for (int j = 0; j < arr.length-1-i; j++) {
+                if(j>0 && arr[j]<arr[j-1])
                 {
                     int temp=arr[j];
                     arr[j]=arr[j-1];
                     arr[j-1]=temp;
-                    swap=true;
-                }if(!swap)
-                {
-                    break;
+                    step=true;
                 }
+            }if(!step)
+            {
+                break;
             }
         }
     }
