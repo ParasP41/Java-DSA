@@ -6,34 +6,25 @@ import java.util.Arrays;
 
 class Assi05 {
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4};
-        rotate(arr);
+        System.out.println(isPerfectSquare(4));
     }
 
-    static void rotate(int[] arr) {
-        int[] newArr = new int[arr.length];
-        int sum = 1;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 0) {
-                continue;
-            } else {
-                sum *= arr[i];
+    public static boolean isPerfectSquare(int num) {
+        for (int i = 1; i <= num; i++) {
+            for (int j = 1; j <= num ; j++) {
+                if(i*j==num && i==j)
+                {
+                    return true;
+                }
             }
         }
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 0) {
-               int[] zeroArr=new int[arr.length];
-               zeroArr[i]=sum;
-                System.out.println(Arrays.toString(zeroArr));
-                return;
-            } else {
-                newArr[i] = sum / arr[i];
-            }
-        }
-        System.out.println(Arrays.toString(newArr));
-
-
+        return false;
     }
+
+
+
+
+
 
 //    static void swap(int[] arr, int i, int j) {
 //        int temp = arr[i];
