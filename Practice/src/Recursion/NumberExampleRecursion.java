@@ -14,6 +14,8 @@ public class NumberExampleRecursion {
         System.out.println(n);
         //recursive call
         //If you call a function call again and again you can treat it as a separate call in the stack
+
+        //this is called tail recursion(the function call)
         number(n + 1);
     }
 }
