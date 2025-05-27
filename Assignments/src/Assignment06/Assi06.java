@@ -5,40 +5,27 @@ import java.util.Arrays;
 
 public class Assi06 {
     public static void main(String[] args) {
-        int[] arr = {5,1,1};
-        System.out.println(findMin(arr));
+        int[] arr = {1,1};
+        int[] arr1 = {1,2};
+        System.out.println(arrangeCoins(5));
     }
 
-    public static int findMin(int[] nums) {
-        int start = 0;
-        int end = nums.length - 1;
-        if (nums.length - 1 == 0) {
-            return nums[0];
+    public static int arrangeCoins(int n) {
+        int k=Math.ceilDiv(n,2);
+        int[] arr=new int[k];
+        for (int i = 0; i < k; i++) {
+            arr[i]=i+1;
         }
-        while (start <= end) {
-            int mid = start + (end - start) / 2;
-
-            if (mid == 0) {
-                if (nums[mid] <= nums[mid + 1]) {
-                    return nums[mid];
-                }
-            }
-
-            if(mid==nums.length-1){
-                if (nums[mid] <= nums[mid - 1]) {
-                    return nums[mid];
-                }
-            }
-
-            if (nums[mid] < nums[mid + 1] && nums[mid] < nums[mid - 1]) {
-                return nums[mid];
-            } else if (nums[mid] > nums[mid + 1]) {
-                start = mid + 1;
-            } else {
-                end = mid - 1;
+        int count=0;
+        int x=0;
+        for (int i = arr.length-1; i >=0 ; i--) {
+            if(count<n)
+            {
+                count+=arr[i];
+                x++;
             }
         }
-        return start + (end - start) / 2;
+        return x;
     }
 
 
