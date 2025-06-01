@@ -5,28 +5,15 @@ import java.util.Arrays;
 
 public class Assi06 {
     public static void main(String[] args) {
-        int[] arr = {1,1};
-        int[] arr1 = {1,2};
-        System.out.println(arrangeCoins(5));
+        int[][] arr = {
+                    {1,4},
+                {2, 3},
+                {3,4},
+        };
+
     }
 
-    public static int arrangeCoins(int n) {
-        int k=Math.ceilDiv(n,2);
-        int[] arr=new int[k];
-        for (int i = 0; i < k; i++) {
-            arr[i]=i+1;
-        }
-        int count=0;
-        int x=0;
-        for (int i = arr.length-1; i >=0 ; i--) {
-            if(count<n)
-            {
-                count+=arr[i];
-                x++;
-            }
-        }
-        return x;
-    }
+
 
 
 //    public static int search(int[] arr, int target) {
