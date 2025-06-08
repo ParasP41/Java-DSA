@@ -2,28 +2,34 @@ package Assignment05;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 class Assi05 {
     public static void main(String[] args) {
-        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-        System.out.println(maxSubArray(arr));
+        int[] arr={1,2,2,3,3};
+        System.out.println(thirdMax(arr));
     }
 
-    public static int maxSubArray(int[] arr) {
-        int MAX_VALUE = Integer.MIN_VALUE;
-        int sum = 0;
+    public static int thirdMax(int[] arr) {
+        ArrayList<Integer> list = new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
-            if (MAX_VALUE < sum) {
-                MAX_VALUE = sum;
-            }
-            if (sum < 0) {
-                sum = 0;
-            }
-
+            list.add(arr[i]);
         }
-        return MAX_VALUE;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i - 1] == arr[i]) {
+                list.remove(arr[i]);
+            }
+        }
+        if(list.size()==1)
+        {
+            return list.get(0);
+        }else if(list.size()==2){
+            return list.get(1);
+        }
+        return list.get(2);
     }
+
+
 
 //    static void swap(int[] arr, int i, int j) {
 //        int temp = arr[i];

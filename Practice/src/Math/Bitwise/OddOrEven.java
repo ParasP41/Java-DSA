@@ -5,7 +5,8 @@ public class OddOrEven {
         int n = 70;
         System.out.println(check(n));
     }
+
     static boolean check(int n) {
-        return (n&1)!=1;
+        return (n & 1) != 1;
     }
 }
