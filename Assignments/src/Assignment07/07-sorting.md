@@ -11,20 +11,20 @@
 ## Easy
 - [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 - [Majority Element](https://leetcode.com/problems/majority-element/)
-- [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
-- [Missing Number](https://leetcode.com/problems/missing-number/)
-- [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
+- [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)//
+- [Missing Number](https://leetcode.com/problems/missing-number/)//
+- [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)//
 - [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
 - [Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)
 - [Assign Cookies](https://leetcode.com/problems/assign-cookies/)
 - [Array Partition I](https://leetcode.com/problems/array-partition-i/)
-- [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/)
-- [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)
+- [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/)//
+- [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)//
 - [Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/)
 - [Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/)//
-- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
+- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)//
 - [Matrix Cells in Distance Order](https://leetcode.com/problems/matrix-cells-in-distance-order/)
-- [Height Checker](https://leetcode.com/problems/height-checker/)
+- [Height Checker](https://leetcode.com/problems/height-checker/)//
 - [Relative Sort Array](https://leetcode.com/problems/relative-sort-array/)
 - [Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/)
 - [Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array/)
