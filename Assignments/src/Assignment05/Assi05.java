@@ -4,29 +4,32 @@ import java.util.*;
 
 class Assi05 {
     public static void main(String[] args) {
-        int[] arr = {-1, -2, -3};
-        System.out.println(sum(arr));
+        int[] arr={1,2,3,1};
+        System.out.println(rob(arr));
     }
-
-    static int sum(int[] arr) {
-        if (arr.length == 3) {
-            return arr[0] * arr[1] * arr[2];
-        }
-        int sum = 0;
-        for (int i = 0, j = 1, k = 2; k == arr.length - 1; i++, j++, k++) {
-            int x = arr[i] + arr[j] + arr[k];
-            if (x > sum) {
-                sum = x;
+    public static int rob(int[] arr) {
+        int even = 0;
+        int odd = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
+                even += arr[i];
+            } else {
+                odd += arr[i];
             }
         }
-        if (arr[0] * arr[arr.length - 2] * arr[arr.length - 1]>sum) {
-            sum=arr[0] * arr[arr.length - 2] * arr[arr.length - 1];
+        int max=Integer.MIN_VALUE;
+        for(int i=0,j=arr.length-1;i<(arr.length-1)/2;i++,j--)
+        {
+            if(arr[i]+arr[j]>max)
+            {
+                max=arr[i]+arr[j];
+            }
         }
-        if (arr[0] * arr[1] * arr[arr.length - 1]>sum) {
-            sum=arr[0] * arr[1] * arr[arr.length - 1];
-        }
-        return sum;
+        int x=Math.max(even,odd);
+        return Math.max(x,max);
     }
+
+
 
 //    static void sort1(int[] arr) {
 //        for (int i = 1; i < arr.length; i++) {

@@ -1,23 +1,21 @@
 public class Pct {
     public static void main(String[] args) {
-        System.out.println(speed(2, 4));
-        deep("abc", 2);
+        System.out.println(steps(14));
     }
-
-    static int speed(int a, int b) {
-        if (b < 1) {
-            return a / 2;
-        }
-        return a * speed(a, b - 1);
+    static int steps(int n)
+    {
+       return helper(n,0);
     }
-
-    static void deep(String str, int n) {
-        String str1 = "";
-        if (n == 0) {
-            System.out.println(str1);
-            return;
+    static int helper(int n,int count)
+    {
+        if(n==0)
+        {
+            return count;
         }
-        str1 += str.charAt(n);
-        deep(str, n - 1);
+        if(n%2==0)
+        {
+            return helper(n/2,count+1);
+        }
+        return helper(n-1, count+1);
     }
 }
