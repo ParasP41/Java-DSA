@@ -1,4 +1,4 @@
-package Recursion.Easy;
+package Recursion.Easy_Recursion;
 //https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/description/
 public class NoOfSteps {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Recursion.Easy;
+package Recursion.Easy_Recursion;
 
 public class ProductOfDigits {
     public static void main(String[] args) {
