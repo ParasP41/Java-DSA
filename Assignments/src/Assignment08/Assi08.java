@@ -1,35 +1,33 @@
 package Assignment08;
 
-import java.sql.Array;
-import java.util.Arrays;
+import java.util.*;
 
 public class Assi08 {
 
     public static void main(String[] args) {
-        System.out.println(sdeep());
+        int[][] arr={{1,2,3},{4,5,6},{7,8,9}};
+        rotate(arr);
     }
-    static boolean sdeep(String a,String b)
-    {
-        for(int i=0,j=a.length()-1;i<j;i++,j--)
-        {
-            if(a.charAt(i)!=b.charAt(j))
-            {
-                return false;
+
+    public static void rotate(int[][] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j]=arr[j][i];
             }
         }
-        return true;
-    }
-    static boolean pdeep(String a,String b)
-    {
-        for(int i=0,j=a.length()-1;i<j;i++,j--)
-        {
-            if(b.charAt(i)!=a.charAt(j))
-            {
-                return false;
+        for (int i = 0; i < arr.length; i++) {
+            for (int left = 0, right = arr[i].length - 1; left < right; left++, right--) {
+                int temp = arr[i][left];
+                arr[i][left] = arr[i][right];
+                arr[i][right] = temp;
             }
         }
-        return true;
+        System.out.println(Arrays.deepToString(arr));
     }
+
 }
+
+
 
 
