@@ -4,46 +4,34 @@ import java.util.*;
 
 class Assi05 {
     public static void main(String[] args) {
-        int[] arr={1,2,3,1};
-        System.out.println(rob(arr));
-    }
-    public static int rob(int[] arr) {
-        int even = 0;
-        int odd = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (i % 2 == 0) {
-                even += arr[i];
-            } else {
-                odd += arr[i];
-            }
-        }
-        int max=Integer.MIN_VALUE;
-        for(int i=0,j=arr.length-1;i<(arr.length-1)/2;i++,j--)
-        {
-            if(arr[i]+arr[j]>max)
-            {
-                max=arr[i]+arr[j];
-            }
-        }
-        int x=Math.max(even,odd);
-        return Math.max(x,max);
+        int[][] arr = {{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
+        setZeroes(arr);
+        System.out.println(Arrays.deepToString(arr));
     }
 
-
-
-//    static void sort1(int[] arr) {
-//        for (int i = 1; i < arr.length; i++) {
-//            for (int j = i; j > 0; j--) {
-//                if (arr[j - 1] < arr[j]) {
-//                    swap(arr, j, j - 1);
-//                }
-//            }
-//        }
-//    }
-
-//    static void swap1(int[] arr, int i, int j) {
-//        int temp = arr[i];
-//        arr[i] = arr[j];
-//        arr[j] = temp;
-//    }
+    public static void setZeroes(int[][] matrix) {
+        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+        int row = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] == 0) {
+                    list.add(new ArrayList<>());
+                    list.get(row).add(i);
+                    list.get(row).add(j);
+                    row++;
+                }
+            }
+        }
+        for (int i = 0; i < list.size(); i++) {
+            int n = list.get(i).get(0);
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[n][j]=0;
+            }
+            int m = list.get(i).get(1);
+            for (int j = 0; j < matrix.length; j++) {
+                matrix[j][m]=0;
+            }
+        }
+    }
 }
+
