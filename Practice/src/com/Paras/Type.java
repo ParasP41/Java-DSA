@@ -1,4 +1,4 @@
-package Paras;
+package com.Paras;
 
 import java.util.Scanner;
 
@@ -20,7 +20,7 @@ public class Type {
 //        byte a=40;
 //        byte b=60;
 //        byte c=100;
-////        int d=(a*b/c);
+//        int d=(a*b/c);
 //        byte d=(byte)(a*b/c); //because when we are performing the operation on the byte it is automatically converting into the int
 //        System.out.println(d);
 
