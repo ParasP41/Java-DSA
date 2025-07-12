@@ -4,31 +4,27 @@ import java.util.*;
 
 class Assi05 {
     public static void main(String[] args) {
-        int[] arr={1,2,0,4,0};
-        System.out.println(Arrays.toString(productExceptSelf(arr)));
-    }
+        int[][] points = {{-17,13},{2,1},{8,-5},{18,-20}};
+        int k = 26;
+        System.out.println(findMaxValueOfEquation(points,k));
 
-    public static int[] productExceptSelf(int[] arr) {
-        int[] num=new int[arr.length];
-        int mul = 1;
-        for (int i = 0; i < arr.length; i++) {
-            mul *= arr[i];
-        }
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 0) {
-                int x=1;
-                for (int j = 0; j < arr.length; j++) {
-                    if(i!=j)
-                    {
-                        x*=arr[j];
-                    }
-                    num[i]=x;
+    }
+    public static int findMaxValueOfEquation(int[][] arr, int k) {
+        int max=0;
+        for (int i = 0; i < arr.length-1; i++) {
+            int firstSum=Math.abs(arr[i][0]-arr[i+1][0]);
+            if(firstSum<=k)
+            {
+                int lastSum=arr[i][1]+arr[i+1][1];
+                int totalSum=lastSum+firstSum;
+                if(max<totalSum)
+                {
+                    max=totalSum;
                 }
-            }else{
-                num[i]=mul/arr[i];
             }
         }
-        return num;
+        return max;
     }
 }
+
 
