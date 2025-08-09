@@ -2,14 +2,12 @@ package Strings;
 
 public class Performance {
     public static void main(String[] args) {
-        String series="";
+        String series = "";
         for (int i = 0; i < 26; i++) {
-            char ch=(char)('a'+i);
-            series =series+ch;
-            System.out.print(ch+" ");
+            char ch = (char)('a' + i);
+            series = series + ch; // series += ch
         }
-            System.out.println(series);
+
+        System.out.println(series);
     }
-
 }
-

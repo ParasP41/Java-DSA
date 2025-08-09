@@ -2,20 +2,16 @@ package Strings;
 
 public class Comparison {
     public static void main(String[] args) {
-//        String a="Paras";
-//        String b="Paras";
-//        if(a==b)
-//        {
-//            System.out.println("Both reference variable are pointing to the same object");
-//        }
+        String a="Paras";
+        String b="Paras";
+        String e=a;
+        System.out.println(a==b);
+        System.out.println(e==b);
 
-//        String c=new String("Paras");
-//        String d=new String("Paras");
-//        if(c==d)//false
-////        if(c.equals(d))//true
-//        {
-//            System.out.println("Both ref variable are pointing at the different object with same name");
-//        }
-//
+        String c=new String("Kunal");
+        String d=new String("Kunal");
+        System.out.println(c==d);
+        System.out.println(c.equals(d));
+        System.out.println(c.charAt(3));
     }
 }
