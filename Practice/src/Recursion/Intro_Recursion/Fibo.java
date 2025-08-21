@@ -2,14 +2,14 @@ package Recursion.Intro_Recursion;
 
 public class Fibo {
     public static void main(String[] args) {
-        System.out.println(fibo(4));
+        System.out.println(series(4));
     }
 
-    static int fibo(int n) {
+    static int series(int n) {
+        //base condition
         if (n < 2) {
             return n;
         }
-        return fibo(n - 2) + fibo(n - 1);
-
+        return series(n - 1) + series(n - 2);
     }
 }
