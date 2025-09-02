@@ -4,46 +4,28 @@ import java.util.*;
 
 public class Assi07 {
     public static void main(String[] args) {
-        int[] nums1={4,9,5};
-        int[] nums2={9,4,9,8,4};
-        System.out.println(Arrays.toString(duplicate(nums1,nums2)));
+        int[] arr={3,30,34,5,9};
+        System.out.println(largestNumber(arr));
     }
 
-    static int[] duplicate(int[] nums1, int[] nums2) {
-        Arrays.sort(nums1);
-        Arrays.sort(nums2);
-        ArrayList<Integer> list = new ArrayList<>();
+    public static String largestNumber(int[] arr) {
+        String total = "";
+        String x = String.valueOf(arr[0]);
 
-        for (int i = 0; i < nums1.length; i++) {
-            if (search(nums2, 0, nums2.length - 1, nums1[i]) != -1) {
-                list.add(nums1[i]);
+        for (int i = 1; i < arr.length; i++) {
+            String a = String.valueOf(arr[i]) + x;
+            String b = x + String.valueOf(arr[i]);
+
+
+            if (a.compareTo(b) > 0) {
+                x = String.valueOf(arr[i]) + x;
+            } else {
+                x = x + String.valueOf(arr[i]);
             }
         }
 
-        // Convert ArrayList to array
-        int[] result = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            result[i] = list.get(i);
-        }
-
-        return result;
+        return x;
     }
-
-    static int search(int[] arr, int start, int end, int target) {
-        if (start > end) {
-            return -1;
-        }
-        int mid = start + (end - start) / 2;
-
-        if (target == arr[mid]) {
-            return mid;
-        }
-        if (target > arr[mid]) {
-            return search(arr, mid + 1, end, target);
-        }
-        return search(arr, start, mid - 1, target);
-    }
-
 }
 
 
