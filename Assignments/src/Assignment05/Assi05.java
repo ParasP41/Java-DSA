@@ -3,28 +3,23 @@ package Assignment05;
 import java.util.*;
 
 class Assi05 {
-    public static void main(String[] args) {
-        int[][] arr = {{1, 4}, {2, 3}, {3, 4}};
-        System.out.println(findRightInterval(arr));
-    }
 
-    public static ArrayList findRightInterval(int[][] intervals) {
-        ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 0; i < intervals.length; i++) {
-            int var = -1;
-            int last = intervals[i][1];
-            for (int j = 0; j < intervals.length; j++) {
-                if (i != j) {
-                    int first = intervals[j][0];
-                    if (last <= first) {
-                        var = j;
-                    }
-                }
-            }
-            list.add(var);
+    public static void main(String[] args) {
+        System.out.println(maxRepeating("aaabaaaabaaabaaaabaaaabaaaabaaaaba","aaaba"));
+    }
+    public static int maxRepeating(String sequence, String word) {
+        return count(sequence,word,0);
+    }
+    static int count(String sequence, String word,int sum)
+    {
+        if(sequence.isEmpty())
+        {
+            return sum;
         }
-        return list;
+        if (sequence.startsWith(word)) {
+            return count(sequence.substring(word.length()),word,sum+1);
+        } else {
+            return count(sequence.substring(1),word,sum);
+        }
     }
 }
-
-
