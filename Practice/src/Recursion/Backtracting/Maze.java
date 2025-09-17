@@ -17,8 +17,8 @@ public class Maze {
         if (r == 1 || c == 1) {
             return 1;
         }
-        int left = count(r-1, c);
-        int right = count(r, c-1);
+        int left = count(r - 1, c);
+        int right = count(r, c - 1);
         return left + right;
     }
 
@@ -29,11 +29,11 @@ public class Maze {
         }
 
         if (r > 1) {
-            path(p + 'D', r-1, c);
+            path(p + 'D', r - 1, c);
         }
 
         if (c > 1) {
-            path(p + 'R', r, c-1);
+            path(p + 'R', r, c - 1);
         }
     }
 
@@ -47,11 +47,11 @@ public class Maze {
         ArrayList<String> list = new ArrayList<>();
 
         if (r > 1) {
-            list.addAll(pathRet(p + 'D', r-1, c));
+            list.addAll(pathRet(p + 'D', r - 1, c));
         }
 
         if (c > 1) {
-            list.addAll(pathRet(p + 'R', r, c-1));
+            list.addAll(pathRet(p + 'R', r, c - 1));
         }
 
         return list;
@@ -67,15 +67,15 @@ public class Maze {
         ArrayList<String> list = new ArrayList<>();
 
         if (r > 1 && c > 1) {
-            list.addAll(pathRetDiagonal(p + 'D', r-1, c-1));
+            list.addAll(pathRetDiagonal(p + 'D', r - 1, c - 1));
         }
 
         if (r > 1) {
-            list.addAll(pathRetDiagonal(p + 'V', r-1, c));
+            list.addAll(pathRetDiagonal(p + 'V', r - 1, c));
         }
 
         if (c > 1) {
-            list.addAll(pathRetDiagonal(p + 'H', r, c-1));
+            list.addAll(pathRetDiagonal(p + 'H', r, c - 1));
         }
 
         return list;
@@ -92,11 +92,11 @@ public class Maze {
         }
 
         if (r < maze.length - 1) {
-            pathRestrictions(p + 'D', maze, r+1, c);
+            pathRestrictions(p + 'D', maze, r + 1, c);
         }
 
         if (c < maze[0].length - 1) {
-            pathRestrictions(p + 'R', maze, r, c+1);
+            pathRestrictions(p + 'R', maze, r, c + 1);
         }
     }
 
