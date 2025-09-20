@@ -5,38 +5,33 @@ import java.util.*;
 class Assi05 {
 
     public static void main(String[] args) {
-        int[][] arr = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
-        System.out.println(Arrays.deepToString(merge(arr)));
+        int n = 6;
+        int index = 1;
+        int maxSum = 10;
+        System.out.println(maxValue(n, index, maxSum));
     }
 
-    public static int[][] merge(int[][] arr) {
-        List<List<Integer>> list = new ArrayList<>();
-
-
-//        Arrays.sort(arr, (a, b) -> Integer.compare(a[0], b[0]));
-
-        for (int i = 0; i < arr.length; i++) {
-            int start = arr[i][0];
-            int end = arr[i][1];
-
-            // ✅ check next intervals if overlapping
-            while (i < arr.length - 1 && end >= arr[i + 1][0]) {
-                end = Math.max(end, arr[i + 1][1]);
-                i++;
-            }
-
-            list.add(Arrays.asList(start, end));
-        }
-        int[][] merge = new int[list.size()][];
-
-        for (int i = 0; i < list.size(); i++) {
-            merge[i] = new int[list.get(i).size()];
-
-            for (int j = 0; j < list.get(i).size(); j++) {
-                merge[i][j] = list.get(i).get(j);
+    public static int maxValue(int n, int index, int maxSum) {
+        int[] nums = new int[n];
+        for (int i = 0; i < n; i++) {
+            if (i == index) {
+                nums[index] = maxSum - n + 1;  // put max possible at index
+            } else {
+                nums[i] = 1;  // fill others with 1
             }
         }
-        return merge;
+        return arr(nums, index);
     }
 
+    static int arr(int[] nums, int index) {
+        boolean leftOk = (index == 0) || Math.abs(nums[index] - nums[index - 1]) <= 1;
+        boolean rightOk = (index == nums.length - 1) || Math.abs(nums[index] - nums[index + 1]) <= 1;
+
+        if (leftOk && rightOk) {
+            return nums[index];
+        }
+
+        nums[index] -= 1;
+        return arr(nums, index);
+    }
 }
