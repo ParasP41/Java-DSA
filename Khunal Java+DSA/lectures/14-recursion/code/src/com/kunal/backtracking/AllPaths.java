@@ -19,7 +19,7 @@ public class AllPaths {
             return;
         }
 
-        if (!maze[r][c]) {
+        if (!maze[r][c]) { 
             return;
         }
 
