@@ -39,6 +39,7 @@ public class WrapperExamples {
         b = temp;
     }
 }
+
 class A {
     final int num = 10;
     String name;
