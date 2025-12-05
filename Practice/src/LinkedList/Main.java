@@ -9,6 +9,7 @@ public class Main {
 //        list.insertLast(8);
 //        list.display();
 //        list.insert(9,2);
+//        list.insertRec(90,2);
 //        list.display();
 //        System.out.println(list.deleteFirst());
 //
@@ -30,10 +31,38 @@ public class Main {
 //        list.find(2);
 //        list.insert(2,89);
 
-        CLL list=new CLL();
-        list.insert(6);
-        list.insert(7);
-        list.insert(8);
-        list.display();
+//        CLL list=new CLL();
+//        list.insert(6);
+//        list.insert(7);
+//        list.insert(8);
+//        list.display();
+
+//        LL list=new LL();
+//        list.insertFirst(1);
+//        list.insertFirst(1);
+//        list.insertFirst(1);
+//        list.insertFirst(2);
+//        list.insertFirst(3);
+//        list.insertFirst(3);
+//        list.duplicate();
+//        list.display();
+
+
+        LL first=new LL();
+        first.insertLast(1);
+        first.insertLast(3);
+        first.insertLast(5);
+
+        LL second=new LL();
+        second.insertLast(1);
+        second.insertLast(2);
+        second.insertLast(9);
+        second.insertLast(14);
+
+        LL ans=LL.merge(first,second);
+        ans.display();
+
+
+
     }
 }

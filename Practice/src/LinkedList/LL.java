@@ -54,6 +54,21 @@ public class LL {
         size++;
     }
 
+    //insertion using the recursion
+    public void insertRec(int val, int index) {
+        head = insertRec(val, index, head);
+    }
+
+    private Node insertRec(int val, int index, Node node) {
+        if (index == 0) {
+            Node temp = new Node(val, node);
+            size++;
+            return temp;
+        }
+        node.next = insertRec(val, index - 1, node.next);
+        return node;
+    }
+
     public int deleteFirst() {
         int val = head.value;
         head = head.next;
@@ -73,12 +88,12 @@ public class LL {
     }
 
     public Node find(int value) {
-       Node node=head;
-        while (node!=null){
-            if (node.value==value){
+        Node node = head;
+        while (node != null) {
+            if (node.value == value) {
                 return node;
             }
-            node=node.next;
+            node = node.next;
         }
         return null;
     }
@@ -132,4 +147,69 @@ public class LL {
             this.next = next;
         }
     }
+
+
+    //Questions
+
+//    https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+    public void duplicate() {
+        if (head == null) return;
+
+        Node node = head;
+
+        while ( node.next != null) {
+            if (node.value == node.next.value) {
+                node.next = node.next.next; // skip duplicate
+            } else {
+                node = node.next; // move forward only when no deletion
+            }
+        }
+        tail=node;
+        tail.next=null;
+    }
+
+//    https://leetcode.com/problems/merge-two-sorted-lists/
+    public static LL merge(LL first,LL second){
+        Node f=first.head;
+        Node s=second.head;
+
+        LL ans=new LL();
+
+        while (f!=null && s!=null){
+            if (f.value<s.value){
+                ans.insertLast(f.value);
+                f=f.next;
+            }else {
+                ans.insertLast(s.value);
+                s=s.next;
+            }
+        }
+        while (f!=null){
+            ans.insertLast(f.value);
+            f=f.next;
+        }
+        while (s!=null){
+            ans.insertLast(s.value);
+            s=s.next;
+        }
+        return ans;
+    }
+
+//    https://leetcode.com/problems/linked-list-cycle/
+//    Slow and fast Pointer method for the cycle detection in linked list
+//    public boolean hasCycle(ListNode head) {
+//        ListNode fast=head;
+//        ListNode slow=head;
+//        while(fast!=null && fast.next!=null){
+//            fast=fast.next.next;
+//            slow=slow.next;
+//            if(fast==slow){
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+
+
+
 }
