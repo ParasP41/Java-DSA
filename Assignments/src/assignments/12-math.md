@@ -5,16 +5,16 @@
 
 ## Easy
 - [Roman to Integer.](https://leetcode.com/problems/roman-to-integer/)
-- [Happy Number.](https://leetcode.com/problems/happy-number/)
-- [Armstrong Numbers ](https://practice.geeksforgeeks.org/problems/armstrong-numbers2727/1/?category[]=Mathematical&category[]=Mathematical&page=2&query=category[]Mathematicalpage2category[]Mathematical)
-- [Power of Four](https://leetcode.com/problems/power-of-four/)
-- [Factorial](https://practice.geeksforgeeks.org/problems/factorial5739/1/?category[]=Mathematical&category[]=Mathematical&page=3&query=category[]Mathematicalpage3category[]Mathematical)
+- [Happy Number.](https://leetcode.com/problems/happy-number/) -- completed
+- [Armstrong Numbers ](https://practice.geeksforgeeks.org/problems/armstrong-numbers2727/1/?category[]=Mathematical&category[]=Mathematical&page=2&query=category[]Mathematicalpage2category[]Mathematical) -- completed
+- [Power of Four](https://leetcode.com/problems/power-of-four/) -- completed
+- [Factorial](https://practice.geeksforgeeks.org/problems/factorial5739/1/?category[]=Mathematical&category[]=Mathematical&page=3&query=category[]Mathematicalpage3category[]Mathematical) -- completed
 - [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
 - [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/)
 - [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
-- [Self Dividing Numbers](https://leetcode.com/problems/self-dividing-numbers/)
+- [Self Dividing Numbers](https://leetcode.com/problems/self-dividing-numbers/) -- completed
 - [Add Binary](https://leetcode.com/problems/add-binary/)
-- [Power of Two](https://leetcode.com/problems/power-of-two/)
+- [Power of Two](https://leetcode.com/problems/power-of-two/) -- completed
 
 ## Medium
 - [Integer to Roman](https://leetcode.com/problems/integer-to-roman/)
@@ -22,13 +22,13 @@
 - [Gray Code](https://leetcode.com/problems/gray-code/)
 - [Perfect Squares](https://leetcode.com/problems/perfect-squares/)
 - [Next Greater Element III](https://leetcode.com/problems/next-greater-element-iii/)
-- [Angle Between Hands of a Clock](https://leetcode.com/problems/angle-between-hands-of-a-clock/)
+- [Angle Between Hands of a Clock]( https://leetcode.com/problems/angle-between-hands-of-a-clock/)
 - [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)
-- [The k<sup>th</sup> Factor of n](https://leetcode.com/problems/the-kth-factor-of-n/)
+- [The k<sup>th</sup> Factor of n](https://leetcode.com/problems/the-kth-factor-of-n/) -- completed
 - [Queries on Number of Points Inside a Circle](https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/)
-- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) --completd
 - [Multiply Strings](https://leetcode.com/problems/multiply-strings/)
-- [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/)
+- [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/) -- completed
 - [Integer Break](https://leetcode.com/problems/integer-break/)
 
 

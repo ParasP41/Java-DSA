@@ -1,8 +1,8 @@
 Pattern Questions
 
-Print these patterns using loops:
+Print these patterns using loops: -- completed
 
-```text
+```text 
 
 1.  *****
     *****
